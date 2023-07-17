@@ -122,5 +122,123 @@ img {
 .search-list::-webkit-scrollbar-thumb{
     background-color: var(--yellow-color);
     outline: none;
-    border: 10px;
+    border-radius: 10px;
 }
+/*js related class*/
+.hide-search-list{
+    display:none;
+}
+/*movie result*/
+.result-container{
+    padding: 3rem 0;
+}
+.anime-poster img{
+    max-width: 300px;
+    margin: 0 auto;
+    border: 4px solid #fff;
+}
+.anime-info {
+    text-align: center;
+    color: #fff;
+    padding-top: 3rem;
+}
+/* movie info stylings */
+.anime-title{
+    font-size: 2rem;
+    color: var(--yellow-color);
+}
+.anime-misc-info{
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+.anime-info .year{
+    font-weight: 500;
+}
+.anime-info .rated {
+    background-color: var(--yellow-color);
+    padding: 0.4rem;
+    margin: 0 0.4rem;
+    border-radius: 3px;
+    font-weight: 600;
+}
+.anime-info .released{
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+.anime-info .writer{
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+.anime-info .genre {
+    background-color: var(--light-dark-color);
+    display: inline-block;
+    padding: 0.5rem;
+    border-radius: 3px;
+}
+.anime-info .plot{
+    max-width: 400px;
+    margin: 1rem auto;
+}
+.movie-info .language{
+    color: var(--yellow-color);
+    font-style: italic;
+}
+
+@media (max-width: 450px) {
+    .logo p {
+      font-size: 1.4rem;
+    }
+    .search-element .form-control {
+      width: 90%;
+      margin: 0 auto;
+      padding: 0.5rem 1rem;
+    }
+    .search-element h3{
+        font-size: 1.4rem;
+    }
+    .search-list{
+        width: 90%;
+        right: 50%;
+        transform: translate(50%);
+    }
+    .search-list .search-list-item{
+        width: 100%;
+    }
+    .anime-misc-info{
+        flex-direction: column;
+    }
+    .anime-misc-info li:nth-child(2){
+        margin: 0.8rem 0;
+    }
+  }
+
+  @media(min-width: 800px){
+    .search-element {
+        flex-direction: row;
+    }
+    .search-element h3{
+        margin-bottom: 0;
+    }
+    .result-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .anime-info{
+        text-align: left;
+        padding-top: 0;
+    }
+    .anime-info .anime-misc-info{
+        justify-content: flex-start;
+        padding-left: 0;
+    }
+    .anime-info .plot{
+        margin-left: 0;
+    }
+    .anime-info .writer{
+        padding-left: 0;
+        margin-left: 0;
+    }
+  }
